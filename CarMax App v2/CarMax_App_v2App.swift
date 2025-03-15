@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CarMax_App_v2App: App {
+    @StateObject var carmax = CarmaxApp()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(carmax)
         }
     }
 }
